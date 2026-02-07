@@ -1,4 +1,4 @@
-update: merge_upstream build doctor reinstall_gateway link
+update: merge_upstream build link doctor reinstall_gateway
 	
 
 merge_upstream:
@@ -11,19 +11,19 @@ build:
 	pnpm build
 	pnpm ui:build # auto-installs UI deps on first run
 
-doctor:
-	pnpm openclaw doctor
-	pnpm openclaw health
-
-reinstall_gateway:
-	pnpm openclaw gateway uninstall
-	pnpm openclaw gateway install
-
 link:
 	pnpm link --global
 
+doctor:
+	openclaw doctor
+	openclaw health
+
+reinstall_gateway:
+	openclaw gateway uninstall
+	openclaw gateway install
+
 dashboard:
-	pnpm openclaw dashboard
+	openclaw dashboard
 
 logs:
-	pnpm openclaw logs --follow
+	openclaw logs --follow
