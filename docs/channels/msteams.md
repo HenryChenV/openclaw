@@ -166,7 +166,7 @@ Before configuring OpenClaw, you need to create an Azure Bot resource.
 
 > **Deprecation notice:** Creation of new multi-tenant bots was deprecated after 2025-07-31. Use **Single Tenant** for new bots.
 
-1. Click **Review + create** → **Create** (wait ~1-2 minutes)
+3. Click **Review + create** → **Create** (wait ~1-2 minutes)
 
 ### Step 2: Get Credentials
 

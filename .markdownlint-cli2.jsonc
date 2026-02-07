@@ -1,11 +1,12 @@
 {
   "globs": ["docs/**/*.md", "docs/**/*.mdx", "README.md"],
-  "ignores": ["docs/zh-CN/**", "docs/.i18n/**"],
+  "ignores": ["docs/zh-CN/**", "docs/.i18n/**", "docs/reference/templates/**"],
   "config": {
     "default": true,
 
     "MD013": false,
     "MD025": false,
+    "MD029": false,
 
     "MD033": {
       "allowed_elements": [

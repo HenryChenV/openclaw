@@ -26,7 +26,7 @@ Docs: [https://developers.deepgram.com](https://developers.deepgram.com)
 DEEPGRAM_API_KEY=dg_...
 ```
 
-1. Enable the provider:
+2. Enable the provider:
 
 ```json5
 {

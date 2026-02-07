@@ -392,7 +392,7 @@ and tokens stay at 0, the agent never ran.
 openclaw gateway restart
 ```
 
-1. Check status + auth:
+2. Check status + auth:
 
 ```bash
 openclaw status
@@ -400,7 +400,7 @@ openclaw models status
 openclaw logs --follow
 ```
 
-1. If it still hangs, run:
+3. If it still hangs, run:
 
 ```bash
 openclaw doctor
@@ -506,7 +506,7 @@ openclaw update --channel dev
 
 This switches to the `main` branch and updates from source.
 
-1. **Hackable install (from the installer site):**
+2. **Hackable install (from the installer site):**
 
 ```bash
 curl -fsSL https://openclaw.ai/install.sh | bash -s -- --install-method git
