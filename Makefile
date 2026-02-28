@@ -1,11 +1,11 @@
-OC = ./openclaw.mjs
+OC = node ./openclaw.mjs
 
 all: check_upstream upgrade
 
-check_upstream: fetch_upstream install
+check_upstream: fetch_upstream reinstall
 	@echo "Upstream looks well."
 
-upgrade: merge_upstram install
+upgrade: merge_upstram reinstall
 	@echo "Upgrade to `openclaw --version`"
 	@echo "Enjoy. ^-^"
 
@@ -14,7 +14,7 @@ fetch_upstream:
 	git checkout upstream-main && git reset --hard upstream/main 
 	#git clean -fd
 
-install: build doctor reinstall_gateway
+reinstall: build doctor reinstall_gateway
 
 build:
 	pnpm install
