@@ -14,7 +14,7 @@ fetch_upstream:
 	git checkout upstream-main && git reset --hard upstream/main 
 	#git clean -fd
 
-reinstall: build doctor reinstall_gateway
+reinstall: build doctor gateway_reinstall memory_index
 
 build:
 	pnpm install
@@ -27,7 +27,7 @@ link:
 doctor:
 	$(OC) doctor
 	
-reinstall_gateway:
+gateway_reinstall:
 	$(OC) gateway stop
 	$(OC) gateway uninstall
 	$(OC) gateway install
@@ -37,3 +37,15 @@ reinstall_gateway:
 merge_upstram:
 	git checkout main
 	git rebase upstream-main
+
+models_login:
+	$(OC) models auth login
+
+memory_index:
+	$(OC) memory index
+
+tui:
+	$(OC) tui
+
+webui:
+	$(OC) dashboard
