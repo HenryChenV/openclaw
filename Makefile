@@ -6,7 +6,7 @@ check_upstream: fetch_upstream reinstall
 	@echo "Upstream looks well."
 
 upgrade: merge_upstram reinstall
-	@echo "Upgrade to `openclaw --version`"
+	@echo "Upgrade to `$(OC) --version`"
 	@echo "Enjoy. ^-^"
 
 fetch_upstream:
