@@ -32,6 +32,11 @@ gateway_reinstall:
 	$(OC) gateway uninstall
 	$(OC) gateway install
 	$(OC) gateway status
+	
+gateway_restart:
+	$(OC) gateway restart
+	$(OC) gateway status
+	$(OC) gateway health
 
 merge_upstram:
 	git checkout main
