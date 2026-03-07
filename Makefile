@@ -2,10 +2,10 @@ OC = node ./openclaw.mjs
 
 all:
 	$(MAKE) check_upstream
+	git checkout main
 	$(MAKE) upgrade
 
 check_upstream: fetch_upstream reinstall
-	git checkout main
 	@echo "Upstream looks well."
 
 upgrade: merge_upstream reinstall
