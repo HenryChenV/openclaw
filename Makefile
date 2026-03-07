@@ -1,10 +1,11 @@
 OC = node ./openclaw.mjs
 
-.PHONY: reinstall
-
-all: check_upstream upgrade
+all:
+	$(MAKE) check_upstream
+	$(MAKE) upgrade
 
 check_upstream: fetch_upstream reinstall
+	git checkout main
 	@echo "Upstream looks well."
 
 upgrade: merge_upstream reinstall
