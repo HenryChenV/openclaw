@@ -1,11 +1,13 @@
 OC = node ./openclaw.mjs
 
+.PHONY: reinstall
+
 all: check_upstream upgrade
 
 check_upstream: fetch_upstream reinstall
 	@echo "Upstream looks well."
 
-upgrade: merge_upstram reinstall
+upgrade: merge_upstream reinstall
 	@echo "Upgrade to `$(OC) --version`"
 	@echo "Enjoy. ^-^"
 
@@ -38,7 +40,7 @@ gateway_restart:
 	$(OC) gateway status
 	$(OC) gateway health
 
-merge_upstram:
+merge_upstream:
 	git checkout main
 	git rebase upstream-main
 
